@@ -21,10 +21,11 @@ h1, h2 {
 
 .created-for {
     text-align: center;
-    font-size: 0.7em;
-    color: #777;
-    margin-top: -10px;
-    margin-bottom: 10px;
+    font-size: 1.0em; /* 글자 크기 키움 */
+    color: #555; /* 색상 진하게 변경 */
+    margin-top: 5px; /* 간격 조정 */
+    margin-bottom: 15px; /* 간격 조정 */
+    font-weight: bold; /* 폰트 굵게 */
 }
 
 .item {
@@ -115,5 +116,4 @@ button:hover {
 }
 
 .footer .author {
-    font-size: 0.7em; /* 제작자 이름 글자 크기를 더 작게 설정 */
-}
+    font-size: 0.7em; /* 제작자 이름 글자 크기를
