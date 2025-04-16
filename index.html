@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코인 변환 계산기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>코인 변환 계산기</h1>
+
+        <div class="item">
+            <h2>희토류</h2>
+            <label for="rareEarth1">1레벨:</label>
+            <input type="number" id="rareEarth1" value="0">
+            <label for="rareEarth2">2레벨:</label>
+            <input type="number" id="rareEarth2" value="0">
+            <label for="rareEarth3">3레벨:</label>
+            <input type="number" id="rareEarth3" value="0">
+        </div>
+
+        <div class="item">
+            <h2>화기연료</h2>
+            <label for="fireFuel1">1레벨:</label>
+            <input type="number" id="fireFuel1" value="0">
+            <label for="fireFuel2">2레벨:</label>
+            <input type="number" id="fireFuel2" value="0">
+            <label for="fireFuel3">3레벨:</label>
+            <input type="number" id="fireFuel3" value="0">
+        </div>
+
+        <div class="item">
+            <h2>생명주철</h2>
+            <label for="lifeIron1">1레벨:</label>
+            <input type="number" id="lifeIron1" value="0">
+            <label for="lifeIron2">2레벨:</label>
+            <input type="number" id="lifeIron2" value="0">
+            <label for="lifeIron3">3레벨:</label>
+            <input type="number" id="lifeIron3" value="0">
+        </div>
+
+        <div class="item">
+            <h2>운철파편</h2>
+            <label for="meteorShard1">1레벨:</label>
+            <input type="number" id="meteorShard1" value="0">
+            <label for="meteorShard2">2레벨:</label>
+            <input type="number" id="meteorShard2" value="0">
+            <label for="meteorShard3">3레벨:</label>
+            <input type="number" id="meteorShard3" value="0">
+        </div>
+
+        <button onclick="calculate()">계산하기</button>
+
+        <div class="result">
+            <h2>총 코인: <span id="totalCoins">0</span></h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
