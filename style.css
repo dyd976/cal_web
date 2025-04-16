@@ -73,16 +73,25 @@ button:hover {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 테이블에 그림자 효과 추가 */
+    border-radius: 5px; /* 테이블 모서리 둥글게 */
+    overflow: hidden; /* 테이블 모서리 둥글게 적용되도록 */
 }
 
 .item-table th, .item-table td {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 12px 8px; /* 패딩 값 조정 */
     text-align: center;
+    font-size: 0.9em; /* 글자 크기 조정 */
 }
 
 .item-table th {
     background-color: #f2f2f2;
+    font-weight: bold; /* 제목 굵게 표시 */
+}
+
+.item-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* 짝수 행 배경색 변경 */
 }
 
 /* Footer 스타일 추가 */
