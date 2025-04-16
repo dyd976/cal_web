@@ -19,6 +19,14 @@ h1, h2 {
     text-align: center;
 }
 
+.created-for {
+    text-align: center;
+    font-size: 0.7em;
+    color: #777;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
 .item {
     margin-bottom: 20px;
 }
@@ -79,7 +87,7 @@ button:hover {
 }
 
 .item-table th, .item-table td {
-    border: 1px solid #ddd;
+    border: 1px solid #333; /* 테이블 실선 검은색으로 변경 */
     padding: 12px 8px; /* 패딩 값 조정 */
     text-align: center;
     font-size: 0.9em; /* 글자 크기 조정 */
