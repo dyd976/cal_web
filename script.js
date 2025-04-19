@@ -1,3 +1,14 @@
+// 페이지 로드 시 모든 입력 필드에 이벤트 리스너 추가
+window.onload = function() {
+    const inputFields = document.querySelectorAll('input[type="number"]');
+    inputFields.forEach(input => {
+        input.addEventListener('input', calculateCoins);
+    });
+
+    // 초기 코인 계산 (필요한 경우)
+    calculateCoins();
+};
+
 function calculateCoins() {
     let totalCoins = 0;
 
