@@ -1,119 +1,18 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    margin: 20px;
 }
-
-.container {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1, h2 {
-    text-align: center;
-}
-
-.created-for {
-    text-align: center;
-    font-size: 1.0em; /* 글자 크기 키움 */
-    color: #555; /* 색상 진하게 변경 */
-    margin-top: 5px; /* 간격 조정 */
-    margin-bottom: 15px; /* 간격 조정 */
-    font-weight: bold; /* 폰트 굵게 */
-}
-
-.item {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="number"] {
-    width: 100%;
-    padding: 8px;
+.item-row {
     margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
 }
-
-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #5cb85c;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+label {
+    display: inline-block;
+    width: 150px; /* 라벨 너비 조정 */
 }
-
-button:hover {
-    background-color: #4cae4c;
+input[type="number"] {
+    width: 80px;
 }
-
-.result {
+#result {
     margin-top: 20px;
-    text-align: center;
-    font-size: 1.2em;
+    font-weight: bold;
 }
-
-/* 모바일 최적화 */
-@media (max-width: 480px) {
-    .container {
-        padding: 10px;
-    }
-}
-
-.item-table {
-    margin-top: 30px;
-}
-
-.item-table table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 테이블에 그림자 효과 추가 */
-    border-radius: 5px; /* 테이블 모서리 둥글게 */
-    overflow: hidden; /* 테이블 모서리 둥글게 적용되도록 */
-}
-
-.item-table th, .item-table td {
-    border: 1px solid #333; /* 테이블 실선 검은색으로 변경 */
-    padding: 12px 8px; /* 패딩 값 조정 */
-    text-align: center;
-    font-size: 0.9em; /* 글자 크기 조정 */
-}
-
-.item-table th {
-    background-color: #f2f2f2;
-    font-weight: bold; /* 제목 굵게 표시 */
-}
-
-.item-table tbody tr:nth-child(even) {
-    background-color: #f9f9f9; /* 짝수 행 배경색 변경 */
-}
-
-/* Footer 스타일 추가 */
-.footer {
-    margin-top: 30px;
-    text-align: center;
-    font-size: 0.8em; /* 글자 크기를 작게 설정 */
-    color: #777; /* 글자 색상을 연하게 설정 */
-}
-
-.footer p {
-    margin: 5px 0;
-}
-
-.footer .author {
-    font-size: 0.7em; /* 제작자 이름 글자 크기를
