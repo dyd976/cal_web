@@ -2,53 +2,69 @@
 window.onload = function() {
     const inputFields = document.querySelectorAll('input[type="number"]');
     inputFields.forEach(input => {
-        input.addEventListener('input', calculateCoins);
+        input.addEventListener('input', calculateAll); // 모든 계산을 한 번에 수행
     });
 
-    // 초기 코인 계산 (필요한 경우)
-    calculateCoins();
+    calculateAll(); // 초기 계산
 };
 
-function calculateCoins() {
-    let totalCoins = 0;
+function calculateAll() {
+    // 모든 아이템에 대해 계산 수행
+    calculateItem('rareEarth1', 5);
+    calculateItem('rareEarth2', 45);
+    calculateItem('rareEarth3', 160);
 
-    // 아이템별 코인 계산
-    totalCoins += calculateItemCoins('rareEarth1', 5);
-    totalCoins += calculateItemCoins('rareEarth2', 45);
-    totalCoins += calculateItemCoins('rareEarth3', 160);
+    calculateItem('fuel1', 5);
+    calculateItem('fuel2', 10);
+    calculateItem('fuel3', 60);
 
-    totalCoins += calculateItemCoins('fuel1', 5);
-    totalCoins += calculateItemCoins('fuel2', 10);
-    totalCoins += calculateItemCoins('fuel3', 60);
+    calculateItem('lifeIron1', 5);
+    calculateItem('lifeIron2', 10);
+    calculateItem('lifeIron3', 40);
 
-    totalCoins += calculateItemCoins('lifeIron1', 5);
-    totalCoins += calculateItemCoins('lifeIron2', 10);
-    totalCoins += calculateItemCoins('lifeIron3', 40);
-
-    totalCoins += calculateItemCoins('meteorFragment1', 5);
-    totalCoins += calculateItemCoins('meteorFragment2', 15);
-    totalCoins += calculateItemCoins('meteorFragment3', 25);
+    calculateItem('meteorFragment1', 5);
+    calculateItem('meteorFragment2', 15);
+    calculateItem('meteorFragment3', 25);
 
     // 총 코인 갯수 업데이트
+    let totalCoins = calculateTotalCoins();
     document.getElementById('totalCoins').innerText = totalCoins;
 }
 
-/**
- * 아이템 종류와 레벨에 따라 코인을 계산하는 함수
- * @param {string} itemPrefix 아이템 종류 및 레벨 (예: 'rareEarth1')
- * @param {number} coinValue 코인 가치
- * @returns {number} 총 아이템 코인
- */
-function calculateItemCoins(itemPrefix, coinValue) {
+function calculateItem(itemPrefix, coinValue) {
     // 가격과 수량 가져오기 (값이 없으면 0으로 처리)
     const price = parseInt(document.getElementById(itemPrefix + 'Price').value) || 0;
     const quantity = parseInt(document.getElementById(itemPrefix + 'Quantity').value) || 0;
 
+    // 1코인당 골드 계산
+    const coinPerGold = price > 0 ? (coinValue / price).toFixed(2) : 0;
+
     // 총 아이템 코인 계산
     const totalItemCoins = quantity * coinValue;
 
-    // (개발자 도구에서 확인하기 위한) 로그 출력
-    console.log(`${itemPrefix}: 가격 = ${price}, 수량 = ${quantity}, 총 코인 = ${totalItemCoins}`);
+    // 결과 업데이트
+    document.getElementById(itemPrefix + 'CoinPerGold').innerText = coinPerGold;
+    document.getElementById(itemPrefix + 'TotalCoins').innerText = totalItemCoins;
+}
 
-    return totalItemCoins;
+function calculateTotalCoins() {
+    let total = 0;
+    // 모든 아이템의 총 코인 수를 더함
+    total += parseInt(document.getElementById('rareEarth1TotalCoins').innerText) || 0;
+    total += parseInt(document.getElementById('rareEarth2TotalCoins').innerText) || 0;
+    total += parseInt(document.getElementById('rareEarth3TotalCoins').innerText) || 0;
+
+    total += parseInt(document.getElementById('fuel1TotalCoins').innerText) || 0;
+    total += parseInt(document.getElementById('fuel2TotalCoins').innerText) || 0;
+    total += parseInt(document.getElementById('fuel3TotalCoins').innerText) || 0;
+
+    total += parseInt(document.getElementById('lifeIron1TotalCoins').innerText) || 0;
+    total += parseInt(document.getElementById('lifeIron2TotalCoins').innerText) || 0;
+    total += parseInt(document.getElementById('lifeIron3TotalCoins').innerText) || 0;
+
+    total += parseInt(document.getElementById('meteorFragment1TotalCoins').innerText) || 0;
+    total += parseInt(document.getElementById('meteorFragment2TotalCoins').innerText) || 0;
+    total += parseInt(document.getElementById('meteorFragment3TotalCoins').innerText) || 0;
+
+    return total;
 }
