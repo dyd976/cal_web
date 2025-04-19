@@ -7,22 +7,35 @@ h1 {
     text-align: center;
 }
 
+.item-group {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.item-group h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
 .item-row {
     margin-bottom: 15px;
     display: flex;
-    flex-direction: column; /* 모바일에서 세로로 쌓이도록 */
+    flex-direction: column;
 }
 
 label {
-    display: block; /* label을 블록 요소로 만들어 세로로 배치 */
-    margin-bottom: 5px; /* label 간 간격 추가 */
+    display: block;
+    margin-bottom: 5px;
 }
 
 input[type="number"] {
-    width: 100%; /* input 창을 화면 너비에 맞춤 */
-    padding: 8px; /* 입력창 내부 여백 */
-    box-sizing: border-box; /* padding, border가 width에 포함되도록 */
-    margin-bottom: 10px; /* input 창 간 간격 추가 */
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
 }
 
 button {
@@ -31,7 +44,7 @@ button {
     color: white;
     border: none;
     cursor: pointer;
-    width: 100%; /* 버튼을 화면 너비에 맞춤 */
+    width: 100%;
     margin-top: 10px;
 }
 
@@ -45,26 +58,26 @@ button:hover {
     text-align: center;
 }
 
-/* 모바일 최적화를 위한 미디어 쿼리 */
+/* 미디어 쿼리 */
 @media (min-width: 600px) {
     .item-row {
-        flex-direction: row; /* 데스크탑에서는 가로로 배치 */
-        align-items: center; /* 세로 중앙 정렬 */
+        flex-direction: row;
+        align-items: center;
     }
 
     label {
-        width: 180px; /* 데스크탑 환경에서 label 너비 조정 */
-        margin-bottom: 0; /* 데스크탑 환경에서 label 간 간격 제거 */
+        width: 180px;
+        margin-bottom: 0;
     }
 
     input[type="number"] {
-        width: auto; /* 데스크탑 환경에서 input 창 너비 자동 조정 */
-        margin-bottom: 0; /* 데스크탑 환경에서 input 창 간 간격 제거 */
-        margin-right: 10px; /* input 창 간 간격 추가 */
+        width: auto;
+        margin-bottom: 0;
+        margin-right: 10px;
     }
 
     button {
-        width: auto; /* 데스크탑 환경에서 버튼 너비 자동 조정 */
+        width: auto;
     }
 
     #result {
