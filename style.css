@@ -23,7 +23,7 @@ h1 {
 .item-row {
     margin-bottom: 15px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* 모바일에서는 세로로 배열 */
 }
 
 label {
@@ -46,18 +46,9 @@ label {
     margin-right: 5px; /* 가격 입력 필드 오른쪽에 약간의 간격 추가 */
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #3e8e41;
+.result-group {
+    margin-left: 10px;
+    margin-top: 5px; /* label과의 간격 조정 */
 }
 
 #result {
@@ -66,10 +57,10 @@ button:hover {
     text-align: center;
 }
 
-/* 미디어 쿼리 */
-@media (min-width: 600px) {
+/* 미디어 쿼리 (데스크탑) */
+@media (min-width: 768px) {
     .item-row {
-        flex-direction: row;
+        flex-direction: row; /* 데스크탑에서는 가로로 배열 */
         align-items: center;
     }
 
@@ -86,8 +77,9 @@ button:hover {
         margin-right: 10px;
     }
 
-    button {
-        width: auto;
+    .result-group {
+        margin-left: 10px;
+        margin-top: 0;
     }
 
     #result {
