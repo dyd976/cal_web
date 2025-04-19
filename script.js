@@ -37,7 +37,7 @@ function calculateItem(itemPrefix, coinValue) {
     const quantity = parseInt(document.getElementById(itemPrefix + 'Quantity').value) || 0;
 
     // 1코인당 골드 계산 (수정됨)
-    const coinPerGold = coinValue > 0 ? (price / coinValue).toFixed(2) : 0;
+    const coinPerGold = price > 0 ? (price / coinValue).toFixed(2) : 0;
 
     // 총 아이템 코인 계산
     const totalItemCoins = quantity * coinValue;
